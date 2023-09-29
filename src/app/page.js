@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-// py-8 sm:px-16 px-8
+
 
 export default function Home() {
   return (
@@ -77,7 +77,7 @@ export default function Home() {
               </tbody>
             </table>
 
-              <Link href="/link/create">
+              <Link href="/create">
                 <p
                   className="mt-6 py-2  border rounded border-gray-400 text-gray-500 hover:cursor-pointer hover:bg-gray-100 hover:border-gray-500 text-center">
                   Add New +
