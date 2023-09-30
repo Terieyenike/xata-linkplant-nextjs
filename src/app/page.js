@@ -1,4 +1,3 @@
-// "use client"
 import Link from "next/link"
 import { getXataClient } from "@/xata"
 
@@ -6,6 +5,8 @@ const xata = getXataClient()
 
 export default async function Home() {
   const links = await xata.db.Link.getAll()
+
+
 
   return (
     <main>
@@ -47,7 +48,9 @@ export default async function Home() {
           </td>
 
           <td className="px-4 py-3 underline text-blue-600"><a href="#">Edit</a></td>
-          <td className="px-4 py-3 underline text-red-600"><a href="#">Delete</a></td>
+          <td className="px-4 py-3 underline text-red-600">
+                <button>Delete</button>
+          </td>
                 </tr>
               ))}
 
