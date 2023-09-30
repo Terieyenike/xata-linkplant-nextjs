@@ -1,10 +1,6 @@
 import Link from "next/link"
 
 export default function Page() {
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log('successfully sent')
-  }
   return (
     <section className="mx-auto p-5 flex flex-col mt-10 my-0 md:w-3/4 lg:w-3/5">
       <Link href={'/'}>
@@ -13,7 +9,7 @@ export default function Page() {
       </p>
       </Link>
       <h1 className="text-4xl mt-5 border-b my-4">Link Form</h1>
-      <form className="mt-5 odd:mb-5 even:mt-6" onSubmit={handleSubmit}>
+      <form className="mt-5 odd:mb-5 even:mt-6">
         <div>
           <label htmlFor="text" className="block"><span className="block text-slate-700 text-sm font-medium mb-2">Text</span></label>
           <input type="text" placeholder="link text" className="w-full px-4 py-2 border bg-white border-slate-300 shadow-sm rounded-lg appearance-none focus:outline-none block placeholder-slate-400" id='text' />
