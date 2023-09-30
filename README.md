@@ -1,4 +1,15 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🌱 LinkPlant
+
+A link sharing platform just like LinkTree which allows save all the links from web in one place for later.
+
+![linkview](https://github.com/Terieyenike/linktree/assets/25850598/b89f0401-62c4-4b7d-ac11-598134662bf8)
+
+
+## Tech stack
+
+- Xata
+- Next.js
+- Tailwind CSS
 
 ## Getting Started
 
@@ -34,3 +45,11 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Author
+
+[Teri Eyenike](https://twitter.com/terieyenike)
+
+[https://iamteri.tech](https://iamteri.tech)
+
+Project based on Xata content hackathon &copy; 2023
