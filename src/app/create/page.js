@@ -13,7 +13,7 @@ export default function Page() {
       </p>
       </Link>
       <h1 className="text-4xl mt-5 border-b my-4">Link Form</h1>
-      <form className="mt-5 odd:mb-5 even:mt-6">
+      <form className="mt-5 odd:mb-5 even:mt-6" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="text" className="block"><span className="block text-slate-700 text-sm font-medium mb-2">Text</span></label>
           <input type="text" placeholder="link text" className="w-full px-4 py-2 border bg-white border-slate-300 shadow-sm rounded-lg appearance-none focus:outline-none block placeholder-slate-400" id='text' />
@@ -29,6 +29,3 @@ export default function Page() {
     </section>
   )
 }
-
-
-// <div className="flex max-sm:justify-end items-center max-sm:w-full"><button className="w-full bg-coral-red rounded-full text-white border-coral-red px-7 py-4">Join waitlist</button></div>
