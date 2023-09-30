@@ -34,6 +34,7 @@ export default async function Home() {
           </th>
                 </tr>
               </thead>
+
               <tbody>
               {links.map((link) => (
                 <tr key={link.id}>
