@@ -30,6 +30,3 @@ export default function Page() {
     </section>
   )
 }
-
-
-// <div className="flex max-sm:justify-end items-center max-sm:w-full"><button className="w-full bg-coral-red rounded-full text-white border-coral-red px-7 py-4">Join waitlist</button></div>
