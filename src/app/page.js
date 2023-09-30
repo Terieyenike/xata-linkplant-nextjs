@@ -5,8 +5,7 @@ import { getXataClient } from "@/xata"
 const xata = getXataClient()
 
 export default async function Home() {
-  const details = await xata.db.Link.getAll()
-  const profile = await xata.db.Profile.getAll()
+  const links = await xata.db.Link.getAll()
 
   return (
     <main>
@@ -36,12 +35,12 @@ export default async function Home() {
                 </tr>
               </thead>
               <tbody>
-              {details.map((detail) => (
-                <tr key={detail.id}>
-          <td className="px-4 py-3">{detail.text}</td>
+              {links.map((link) => (
+                <tr key={link.id}>
+          <td className="px-4 py-3">{link.text}</td>
           <td className="px-4 py-3">
-            <a href={detail.url} target="_blank">
-              {detail.url}
+            <a href={link.url} target="_blank">
+              {link.url}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-4 w-4 inline"

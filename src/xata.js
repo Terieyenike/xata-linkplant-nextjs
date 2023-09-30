@@ -4,20 +4,10 @@ import { buildClient } from "@xata.io/client";
 /** @type { SchemaTables } */
 const tables = [
   {
-    name: "Profile",
-    columns: [
-      { name: "name", type: "string" },
-      { name: "slug", type: "string" },
-      { name: "profile_img", type: "file" },
-    ],
-    revLinks: [{ column: "profile", table: "Link" }],
-  },
-  {
     name: "Link",
     columns: [
       { name: "text", type: "string" },
       { name: "url", type: "string" },
-      { name: "profile", type: "link", link: { table: "Profile" } },
     ],
   },
 ];
