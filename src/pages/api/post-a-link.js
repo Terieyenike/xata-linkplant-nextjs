@@ -1,6 +1,6 @@
 import { getXataClient } from "@/xata";
 
-const handler = async (request, response) => {
+export default async function handler (request, response) {
   const xata = getXataClient()
   const { text, url } = request.body
 
@@ -12,4 +12,4 @@ const handler = async (request, response) => {
   response.end()
 }
 
-export default handler
+// export default handler

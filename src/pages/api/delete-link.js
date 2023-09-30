@@ -1,8 +1,10 @@
 import { getXataClient } from "@/xata";
 
 const handler = async (request, response) => {
-  const xata = getXataClient()
-  await xata.db.Link.delete("rec_ckc1heriene6sendaa40")
+  const xata = await getXataClient()
+  const {id} = request.body
+  await xata.db.Link.delete(id)
+  response.end()
 }
 
 export default handler

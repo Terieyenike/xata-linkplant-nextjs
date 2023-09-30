@@ -1,8 +1,11 @@
 "use client"
 import { useState } from "react"
 import Link from "next/link"
+import { useRouter } from 'next/navigation'
 
 export default function Page() {
+  const router = useRouter()
+
   const defaultFormFields = {
     text: '',
     url: ''
@@ -38,6 +41,7 @@ export default function Page() {
     }
     submit()
     resetFormFields()
+    router.push('/')
   }
 
   const isValidUrl = (url) => {
@@ -70,7 +74,7 @@ export default function Page() {
         </div>
         <div className="mt-5">
           <label htmlFor="url" className="block"><span className="block text-slate-700 text-sm font-medium mb-2">Url</span></label>
-          <input type="text" name='url' value={url} placeholder="website url" className="w-full px-4 py-2 border bg-white border-slate-300 shadow-sm rounded-lg appearance-none focus:outline-none block placeholder-slate-400" id='text' onChange={handleChange} />
+          <input type="text" name='url' value={url} placeholder="https://example.com" className="w-full px-4 py-2 border bg-white border-slate-300 shadow-sm rounded-lg appearance-none focus:outline-none block placeholder-slate-400" id='text' onChange={handleChange} />
         </div>
         {error && <p className="text-sm text-red-500 mt-3 font-medium">{error}</p>}
         <div className="max-sm:w-full mt-5">

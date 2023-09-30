@@ -1,12 +1,23 @@
+"use client"
 import Link from "next/link"
 import { getXataClient } from "@/xata"
 
-const xata = getXataClient()
 
 export default async function Home() {
+  const xata = getXataClient()
   const links = await xata.db.Link.getAll()
 
-
+  const deleteLink = (id) => {
+    fetch('/api/delete-link', {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        id
+      }).then(() => window.location.reload())
+    }).catch(error => console.log(error))
+  }
 
   return (
     <main>
@@ -49,7 +60,7 @@ export default async function Home() {
 
           <td className="px-4 py-3 underline text-blue-600"><a href="#">Edit</a></td>
           <td className="px-4 py-3 underline text-red-600">
-                <button>Delete</button>
+                <button onClick={() => deleteLink(link.id)}>Delete</button>
           </td>
                 </tr>
               ))}
