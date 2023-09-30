@@ -17,12 +17,26 @@ export default function Page() {
     setFormFields(defaultFormFields)
   }
 
+  const submit = () => {
+    fetch('/api/post-a-link', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        text,
+        url
+      })
+    })
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault()
     if(!text || !url) {
       setError('please enter text and url')
       return
     }
+    submit()
     resetFormFields()
   }
 
