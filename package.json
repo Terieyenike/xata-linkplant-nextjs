@@ -9,9 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@xata.io/client": "0.26.6",
+    "next": "latest",
     "react": "latest",
-    "react-dom": "latest",
-    "next": "latest"
+    "react-dom": "latest"
   },
   "devDependencies": {
     "autoprefixer": "latest",
