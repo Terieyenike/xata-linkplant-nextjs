@@ -5,7 +5,6 @@ import Link from "next/link"
 import { useRouter } from 'next/navigation'
 
 export default function Page() {
-
   const router = useRouter()
 
   const defaultFormFields = {
@@ -69,15 +68,6 @@ export default function Page() {
       </p>
       </Link>
       <h1 className="text-4xl mt-5 border-b my-4">Link Form</h1>
-      <form className="mt-5 odd:mb-5 even:mt-6">
-        <div>
-          <label htmlFor="text" className="block"><span className="block text-slate-700 text-sm font-medium mb-2">Text</span></label>
-          <input type="text" placeholder="link text" className="w-full px-4 py-2 border bg-white border-slate-300 shadow-sm rounded-lg appearance-none focus:outline-none block placeholder-slate-400" id='text' />
-        </div>
-        <div className="mt-5">
-          <label htmlFor="url" className="block"><span className="block text-slate-700 text-sm font-medium mb-2">Url</span></label>
-          <input type="text" placeholder="website url" className="w-full px-4 py-2 border bg-white border-slate-300 shadow-sm rounded-lg appearance-none focus:outline-none block placeholder-slate-400" id='text' />
-        </div>
       <form className="mt-5 odd:mb-5 even:mt-6" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="text" className="block"><span className="block text-slate-700 text-sm font-medium mb-2">Text</span></label>
